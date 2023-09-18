@@ -1,0 +1,84 @@
+---
+// component import
+import MainLayout from "../layouts/MainLayout.astro";
+
+var ibanValid = true;
+---
+
+<MainLayout title="IBAN Validator" description="IBAN Validator and Parser">
+    <div class="container-wrapper">
+        <div class="container">
+            <div class="container-header">
+                <h1>IBAN Validator</h1>
+            </div>
+            <div class="container-body">
+                <p class="text-center">
+                    To check whether an IBAN is correct, please enter it here:
+                </p>
+                <input type="text" name="ibanInput" id="ibanInput" value="" placeholder="..." />
+                <input type="button" id="validateButton" value="VALIDATE IBAN" />
+            </div>
+            <div class="container-footer">
+                <p id="result"></p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="container-header">
+                <h1>Bank Details</h1>
+            </div>
+            <div class="container-body">
+                <table>
+                    <tr>
+                        <td>Country Name</td>
+                        <td class="bold" id="countryName"></td>
+                    </tr>
+                    <tr>
+                        <td>Country Code</td>
+                        <td class="bold" id="countryCode"></td>
+                    </tr>
+                    <tr>
+                        <td>Check Sum Digits</td>
+                        <td class="bold" id="checkSumDigits"></td>
+                    </tr>
+                    <tr>
+                        <td>Bank Number</td>
+                        <td class="bold" id="bankNumber"></td>
+                    </tr>
+                    <tr>
+                        <td>Branch Code</td>
+                        <td class="bold" id="branchCode"></td>
+                    </tr>
+                    <tr>
+                        <td>Account Number</td>
+                        <td class="bold" id="accountNumber"></td>
+                    </tr>
+                    <tr>
+                        <td>National Code</td>
+                        <td class="bold" id="nationalCode"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="container">
+            <div class="container-header">
+                <h1>Verification</h1>
+            </div>
+            <div class="container-body">
+                <table>
+                    <tr>
+                        <td>IBAN Length</td>
+                        <td class="bold" id="ibanLength"></td>
+                    </tr>
+                    <tr>
+                        <td>ISO 7064 MOD-97-10</td>
+                        <td class="bold" id="isoModulo"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</MainLayout>
+
+<script>
+    import "../scripts/main.js";
+</script>

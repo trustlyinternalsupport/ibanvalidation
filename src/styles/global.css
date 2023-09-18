@@ -1,0 +1,123 @@
+/* Apply box-sizing to all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4; /* Light gray background color */
+}
+
+/* Center the containers horizontally on the page */
+.container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Style each individual container */
+.container {
+    width: 350px;
+    height: 350px;
+    margin: 0 10px; /* Add some horizontal margin for spacing between containers */
+    padding: 20px; /* Add some padding inside the container */
+    background-color: #ffffff; /* White background color for the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.2s ease; /* Add a hover effect */
+}
+
+.container-header {
+    height: 20%;
+}
+
+.container-body {
+    min-height: 60%;
+}
+
+.container-footer {
+    height: 20%;
+}
+
+/* Style the heading */
+.container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333; /* Dark gray heading color */
+}
+
+/* Style the input field and button with the same width and height */
+input[type="text"], input[type="button"] {
+    width: 100%;
+    height: 40px; /* Adjust the height as needed */
+}
+
+/* Style the button */
+input[type="text"] {
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+
+/* Style the button */
+input[type="button"] {
+    background-color: #4CAF50;
+    color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input[type="button"]:hover {
+    background-color: #45a049;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+    min-width: 120px;
+}
+
+#result {
+    font-weight: bold;
+}
+
+/* Style the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the table header (th) */
+table th {
+    background-color: #f4f4f4;
+    text-align: left;
+    padding: 10px;
+}
+
+/* Style alternating rows */
+table tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+/* Style table cells (td) */
+table td {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
