@@ -103,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Account Details
         document.querySelector('#checkSumDigits').textContent = account.ibanComponents.checkSumDigits;
         document.querySelector('#bankNumber').textContent = account.ibanComponents.bankNumber;
+        document.querySelector('#sortCode').textContent = account.ibanComponents.sortCode;
         document.querySelector('#branchCode').textContent = account.ibanComponents.branchCode;
         document.querySelector('#accountNumber').textContent = account.ibanComponents.accountNumber;
         document.querySelector('#identificationNumber').textContent = account.ibanComponents.identificationNumber;

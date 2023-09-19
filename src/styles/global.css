@@ -23,7 +23,7 @@ body, html {
 /* Style each individual container */
 .container {
     width: 400px;
-    height: 400px;
+    height: 450px;
     margin: 0 10px; /* Add some horizontal margin for spacing between containers */
     padding: 20px; /* Add some padding inside the container */
     background-color: #ffffff; /* White background color for the container */
