@@ -21,7 +21,7 @@ class Account {
         if (countries.hasOwnProperty(ibanCountryCode)) {
             return ibanCountryCode;
         } else {
-            return 'Unknown Country Code';
+            return 'invalid';
         }
     }
 
@@ -119,6 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('#supportsSEPA').textContent = account.ibanComponents.supportsSEPA;
 
         // Validations
+        document.querySelector('#countryCodeInput').textContent = account.getCountryCode();
         document.querySelector('#ibanLength').textContent = account.validateIbanLength();
         document.querySelector('#isoModulo').textContent = account.moduloValidation();
 
@@ -135,5 +136,3 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-
-// DE89370400440532013000

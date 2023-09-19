@@ -1,8 +1,6 @@
 ---
 // component import
 import MainLayout from "../layouts/MainLayout.astro";
-
-var ibanValid = true;
 ---
 
 <MainLayout title="IBAN Validator" description="IBAN Validator and Parser">
@@ -15,8 +13,18 @@ var ibanValid = true;
                 <p class="text-center">
                     To check whether an IBAN is correct, please enter it here:
                 </p>
-                <input type="text" name="ibanInput" id="ibanInput" value="" placeholder="..." />
-                <input type="button" id="validateButton" value="VALIDATE IBAN" />
+                <input
+                    type="text"
+                    name="ibanInput"
+                    id="ibanInput"
+                    value=""
+                    placeholder="..."
+                />
+                <input
+                    type="button"
+                    id="validateButton"
+                    value="VALIDATE IBAN"
+                />
             </div>
             <div class="container-footer">
                 <p id="result"></p>
@@ -100,6 +108,10 @@ var ibanValid = true;
             </div>
             <div class="container-body">
                 <table>
+                    <tr>
+                        <td>Country Code</td>
+                        <td class="bold" id="countryCodeInput"></td>
+                    </tr>
                     <tr>
                         <td>IBAN Length</td>
                         <td class="bold" id="ibanLength"></td>
