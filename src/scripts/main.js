@@ -41,12 +41,7 @@ class Account {
                 for (const component in countryInfo.ibanStructure) {
                     const positions = countryInfo.ibanStructure[component].position;
                     const value = this.iban.substring(positions[0], positions[1]);
-
-                    if (countryInfo.ibanStructure[component].type === 'number') {
-                        extracted[component] = parseInt(value, 10);
-                    } else {
-                        extracted[component] = value;
-                    }
+                    extracted[component] = value;
                 }
             }
         }
@@ -105,14 +100,22 @@ document.addEventListener('DOMContentLoaded', function () {
         const ibanInput = document.getElementById('ibanInput').value;
         const account = new Account(ibanInput);
 
-        // Bank Details
-        document.querySelector('#countryName').textContent = account.ibanComponents.name;
-        document.querySelector('#countryCode').textContent = account.ibanComponents.countryCode;
+        // Account Details
         document.querySelector('#checkSumDigits').textContent = account.ibanComponents.checkSumDigits;
         document.querySelector('#bankNumber').textContent = account.ibanComponents.bankNumber;
         document.querySelector('#branchCode').textContent = account.ibanComponents.branchCode;
         document.querySelector('#accountNumber').textContent = account.ibanComponents.accountNumber;
+        document.querySelector('#identificationNumber').textContent = account.ibanComponents.identificationNumber;
         document.querySelector('#nationalCode').textContent = account.ibanComponents.nationalCode;
+        document.querySelector('#accountType').textContent = account.ibanComponents.accountType;
+        document.querySelector('#ownerType').textContent = account.ibanComponents.ownerType;
+        document.querySelector('#reservedCharacter').textContent = account.ibanComponents.reservedCharacter;
+
+        // Bank Details
+        document.querySelector('#countryName').textContent = account.ibanComponents.name;
+        document.querySelector('#countryCode').textContent = account.ibanComponents.countryCode;
+        //document.querySelector('#countryName').textContent = account.ibanComponents.name;
+        document.querySelector('#supportsSEPA').textContent = account.ibanComponents.supportsSEPA;
 
         // Validations
         document.querySelector('#ibanLength').textContent = account.validateIbanLength();

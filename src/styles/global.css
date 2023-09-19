@@ -22,8 +22,8 @@ body, html {
 
 /* Style each individual container */
 .container {
-    width: 350px;
-    height: 350px;
+    width: 400px;
+    height: 400px;
     margin: 0 10px; /* Add some horizontal margin for spacing between containers */
     padding: 20px; /* Add some padding inside the container */
     background-color: #ffffff; /* White background color for the container */
@@ -36,11 +36,7 @@ body, html {
 }
 
 .container-header {
-    height: 20%;
-}
-
-.container-body {
-    min-height: 60%;
+    height: 15%;
 }
 
 .container-footer {
